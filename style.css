@@ -1,5 +1,5 @@
 body {
-background-color: #FFFAF0;
+    background-color: #FFFAF0;
     height:4600px;
 }
 
@@ -123,13 +123,14 @@ background-color: #FFFAF0;
 }
 
 .sprite {
-	width: 102px;
+	width: 98.625px;
 	height: 148px;
 	margin-top: 40px;
 }
 
 .right {
-	background-image: url(http://atomicrobotdesign.com/blog_media/css-sprite/standing-right.png);
+    background-image: url(poppetjestil.svg);
+    background-repeat: no-repeat; 
 }
 
 .left {
@@ -137,40 +138,35 @@ background-color: #FFFAF0;
 }
 
 .walk-right {
-	background-image: url(http://atomicrobotdesign.com/blog_media/css-sprite/walk-right.png);
-	-webkit-animation: walk .9s steps(6) infinite;
-	-moz-animation: walk .9s steps(6) infinite;
-	-ms-animation: walk .9s steps(6) infinite;
-	-o-animation: walk .9s steps(6) infinite;
-	animation: walk .9s steps(6) infinite;
+	background-image: url(spriterechts.png);
+	-webkit-animation: walk .8s steps(8) infinite;
+	-moz-animation: walk .8s steps(8) infinite;
+	-ms-animation: walk .8s steps(8) infinite;
+	-o-animation: walk .8s steps(8) infinite;
+    animation: walk .8s steps(8) infinite;
 }
 
 .walk-left {
-	background-image: url(http://atomicrobotdesign.com/blog_media/css-sprite/walk-left.png);
-	-webkit-animation: walk .9s steps(6) infinite;
-	-moz-animation: walk .9s steps(6) infinite;
-	-ms-animation: walk .9s steps(6) infinite;
-	-o-animation: walk .9s steps(6) infinite;
-	animation: walk .9s steps(6) infinite;
+	background-image: url(spritelinks.png);
+	-webkit-animation: walk .8s steps(8) infinite;
+	-moz-animation: walk .8s steps(8) infinite;
+	-ms-animation: walk .8s steps(8) infinite;
+	-o-animation: walk .8s steps(8) infinite;
+	animation: walk .8s steps(8) infinite;
 }
 
-@-webkit-keyframes walk {
+@keyframes walk {
 	from { background-position: 0px; }
-	to { background-position: -612px; }
+	to { background-position: -789px; }
 }
-@-moz-keyframes walk {
-	from { background-position: 0px; }
-	to { background-position: -612px; }
+
+img#gras {
+    position: absolute;
+    width: 3012.17px;
+    height: 991.67px;
+    left: -160px;
 }
-@-ms-keyframes walk {
-	from { background-position: 0px; }
-	to { background-position: -612px; }
-}
-@-o-keyframes walk {
-	from { background-position: 0px; }
-	to { background-position: -612px; }
-}
-@-keyframes walk {
-	from { background-position: 0px; }
-	to { background-position: -612px; }
+
+::-webkit-scrollbar { 
+    display: none; 
 }

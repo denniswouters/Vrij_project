@@ -35,13 +35,13 @@ function() {
 			key.left = true;
 		}
     if (key.right === true) {
-			trans += 10;
+			trans += 12;
 			translate();
 			sprite.classList.remove('left');
 			sprite.classList.add('right');
 			sprite.classList.add('walk-right');
 		} else if (key.left === true) {
-			trans -= 10;
+			trans -= 12;
 			translate();
 			sprite.classList.remove('right');
 			sprite.classList.add('left');
