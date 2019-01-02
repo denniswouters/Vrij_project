@@ -26,22 +26,22 @@ function() {
 	function translate() {
 		sprite.style[property] = 'translateX(' + trans + 'px)';
 	}
-
 	function walk(e) {
 		var keyCode = e.keyCode;
 		if (keyCode === 39) {
 			key.right = true;
+
 		} else if (keyCode === 37) {
 			key.left = true;
 		}
     if (key.right === true) {
-			trans += 12;
+			trans += 0;
 			translate();
 			sprite.classList.remove('left');
 			sprite.classList.add('right');
 			sprite.classList.add('walk-right');
 		} else if (key.left === true) {
-			trans -= 12;
+			trans -= 0;
 			translate();
 			sprite.classList.remove('right');
 			sprite.classList.add('left');
@@ -65,5 +65,5 @@ function() {
 
 	document.addEventListener('keydown', walk, false);
 	document.addEventListener('keyup', stop, false);
-
-});
+}
+);
