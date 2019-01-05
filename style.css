@@ -14,7 +14,7 @@ body {
     bottom: 14.5%;
 	overflow: auto;
 	position: fixed;
-	left: 45%;
+	left: 44%;
 }
 
 img#wolkjes {
@@ -85,4 +85,26 @@ img#gras {
 	width: 200px;
 	height: 200px;
 	color: red;
+}
+
+h1 {
+	animation: type 3s steps(44);
+	overflow: hidden;
+	white-space: nowrap;
+	font-family: consolas;
+	border-right: 4px solid white;
+	position: absolute;
+	color: white;
+	bottom: 5%;
+	left: 25%;
+	z-index: 5;
+}
+
+@keyframes type {
+	0% {
+	width: 0ch;
+}
+100% {
+	width: 44ch;
+  }
 }
