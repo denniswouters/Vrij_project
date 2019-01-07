@@ -2,10 +2,12 @@ body {
 	background-color: #1e90ff;
 	background-image: url(achtergrondwolken.png);
 	background-size: 100%;
+	background-attachment: fixed;
 	height:4600px;
 	overflow-y: hidden;
 	padding: 0px;
 	margin: 0px;
+	display: flex;
 }
 
 .sprite {
@@ -15,6 +17,15 @@ body {
 	overflow: auto;
 	position: fixed;
 	left: 44%;
+	z-index: 2;
+}
+
+img#grasvoorstadion {
+	position: absolute;
+	left: 120%;	
+	width: 34%;
+	top: 77%;
+	z-index: 2;
 }
 
 img#wolkjes {
@@ -24,18 +35,42 @@ img#wolkjes {
 img#stadion1913 {
 	z-index: 1;
 	position: absolute;
-	top: 5%;
-	left: 100%;
+	bottom: 15%;
+	left: 120%;
 	width: 50%;
 }
 
 img#poort {
 	z-index: 2;
 	position: absolute;
-	top: 26%;
-	left: 22%;
-	width: 56%;
+	bottom: 12%;
+	left: 21%;
+	width: 900px;
 }
+  
+  img#bal1 {
+	width: 60px;
+	height: 60px;
+	animation: bounce 0.5s;
+	animation-direction: alternate;
+	animation-timing-function: cubic-bezier(.5,0.05,1,.5);
+	animation-iteration-count: infinite;
+	position: absolute;
+	margin-left: 220%;
+	bottom: 40%; 
+  }
+  
+  @keyframes bounce {
+	from { transform: translate3d(0, 0, 0);     }
+	to   { transform: translate3d(0, 200px, 0); }
+  }
+
+  
+  @-webkit-keyframes bounce {
+	from { -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+	to   { -webkit-transform: translate3d(0, 200px, 0); transform: translate3d(0, 200px, 0); }
+  }
+
 
 .right {
     background-image: url(poppetjerechts.png);
@@ -68,11 +103,36 @@ img#poort {
 	to { background-position: -1632px; }
 }
 
+img#poort1913 {
+	height: 360px;
+	position: absolute;
+	bottom: 11%;
+	left: 100%;
+}
+
 img#gras {
     position: absolute;
     width: 3008px;
     height: 157px;
     left: -160px;
+	bottom: 0px;
+	z-index: 2;
+}
+
+img#gras2 {
+    position: absolute;
+    width: 3008px;
+    height: 157px;
+    left: 1000px;
+	bottom: 0px;
+	z-index: 2;
+}
+
+img#gras3 {
+    position: absolute;
+    width: 3008px;
+    height: 157px;
+    left: 2160px;
 	bottom: 0px;
 	z-index: 2;
 }
@@ -88,15 +148,15 @@ img#gras {
 }
 
 h1 {
-	animation: type 3s steps(44);
+	font-family: 'Heebo', sans-serif;
+	animation: type 3s steps(36);
 	overflow: hidden;
 	white-space: nowrap;
-	font-family: consolas;
 	border-right: 4px solid white;
 	position: absolute;
 	color: white;
-	bottom: 5%;
-	left: 25%;
+	bottom: 4%;
+	left: 30%;
 	z-index: 5;
 }
 
@@ -105,6 +165,22 @@ h1 {
 	width: 0ch;
 }
 100% {
-	width: 44ch;
+	width: 36ch;
   }
+}
+
+img#tekstwolkje {
+	display: none;
+    position: fixed;
+	bottom: 50%;
+	left: 54%;
+    width: 20%;
+    z-index: 10;
+}
+
+img#zozieteenbaleruit {
+	height: 120px;
+	position: absolute;
+	top: 350px;
+	left: 3480px;
 }
