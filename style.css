@@ -53,13 +53,16 @@ img#poort {
 	height: 60px;
 	animation: bounce 0.5s;
 	animation-direction: alternate;
-	animation-timing-function: cubic-bezier(.5,0.05,1,.5);
+	animation-timing-function: cubic-bezier(.5,0.05,1,.5); /* Hier geef ik de bal wat meer 'bounce-effect' door hem
+															  sneller te laten gaan wanneer hij bijna de grond raakt. */
 	animation-iteration-count: infinite;
 	position: absolute;
 	margin-left: 220%;
 	bottom: 40%; 
   }
   
+  /* Dit is de basketbal. Hier zeg ik dat de x, y en z as 0 moeten zijn bij de start
+     en alleen de y as naar 200px moet gaan. */
   @keyframes bounce {
 	from { transform: translate3d(0, 0, 0);     }
 	to   { transform: translate3d(0, 200px, 0); }
@@ -80,6 +83,8 @@ img#poort {
 	background-image: url(poppetjelinks.png);
 }
 
+/* Bij walk-right en walk-left deelt hij de afbeelding van de sprite in 8 stukken, 
+   in 0.6 seconden, en dit doet hij oneindig lang. */
 .walk-right {
 	background-image: url(spritephotoshop.png);
 	-webkit-animation: walk .6s steps(8) infinite;
@@ -98,6 +103,7 @@ img#poort {
 	animation: walk .6s steps(8) infinite;
 }
 
+/* Hier loopt hij de afbeelding af van 0 tot 1632 pixels. */
 @keyframes walk {
 	from { background-position: 0px; }
 	to { background-position: -1632px; }
@@ -160,15 +166,6 @@ h1 {
 	z-index: 5;
 }
 
-@keyframes type {
-	0% {
-	width: 0ch;
-}
-100% {
-	width: 36ch;
-  }
-}
-
 img#tekstwolkje {
 	display: none;
     position: fixed;
@@ -183,4 +180,12 @@ img#zozieteenbaleruit {
 	position: absolute;
 	top: 350px;
 	left: 3480px;
+}
+
+img#pijltjes {
+	height: 100px;
+	position: absolute;
+	bottom: 3%;
+	left: 45.5%;
+	z-index: 4;
 }
