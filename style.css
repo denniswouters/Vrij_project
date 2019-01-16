@@ -20,13 +20,6 @@ body {
 	z-index: 2;
 }
 
-img#grasvoorstadion {
-	position: absolute;
-	left: 120%;	
-	width: 34%;
-	top: 77%;
-	z-index: 2;
-}
 
 img#wolkjes {
 	width: 100%;
@@ -45,7 +38,7 @@ img#poort {
 	position: absolute;
 	bottom: 12%;
 	left: 21%;
-	width: 900px;
+	width: 58%;
 }
   
   img#bal1 {
@@ -188,4 +181,94 @@ img#pijltjes {
 	bottom: 3%;
 	left: 45.5%;
 	z-index: 4;
+}
+
+@media screen and (max-width: 1000px) {
+
+	img#pijltjes {
+		height: 40%;
+		position: absolute;
+		bottom: -150%;
+		left: 118%;
+		z-index: 4;
+	}
+	
+	img#gras {
+		position: absolute;
+		width: 1000%;
+		height: 100%;
+		left: -160px;
+		bottom: -180%;
+		z-index: 2;
+	}
+	
+	img#gras2 {
+		position: absolute;
+		width: 1000%;
+		height: 100%;
+		left: 1000px;
+		bottom: -180%;
+		z-index: 2;
+	}
+	
+	img#gras3 {
+		position: absolute;
+		width: 1000%;
+		height: 100%;
+		left: 2160px;
+		bottom: -180%;
+		z-index: 2;
+	}
+
+	img#poort1913 {
+		height: 100%;
+		position: absolute;
+		bottom: -100%;
+		left: 300%;
+	}
+
+	img#poort {
+		z-index: 2;
+		position: absolute;
+		bottom: -100%;
+		left: 60%;
+		width: 150%;
+	}
+
+	.sprite {
+		width: 204px;
+		height: 395px;
+		bottom: 32%;
+		overflow: auto;
+		position: fixed;
+		left: 46%;
+		z-index: 2;
+	}
+
+	img#stadion1913 {
+		z-index: 1;
+		position: absolute;
+		bottom: -94%;
+		left: 360%;
+		width: 140%;
+	}
+
+	img#bal1 {
+		height: 10%;
+		animation: bounce 0.5s;
+		animation-direction: alternate;
+		animation-timing-function: cubic-bezier(.5,0.05,1,.5); /* Hier geef ik de bal wat meer 'bounce-effect' door hem
+																  sneller te laten gaan wanneer hij bijna de grond raakt. */
+		animation-iteration-count: infinite;
+		position: absolute;
+		margin-left: 570%;
+		bottom: -60%; 
+	  }
+
+	  img#zozieteenbaleruit {
+		height: 120px;
+		position: absolute;
+		top: 130%;
+		left: 580%
+	}
 }
