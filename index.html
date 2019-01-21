@@ -8,10 +8,32 @@
       <script src="poppetje.js"></script>
 </head>
 <body>
-      <!-- Hieronder staan alle elementen die ik heb getekend. -->
+      <script>
+            window.addEventListener('keyup', arrowUp)
+            window.addEventListener('keydown', arrowDown)
+
+            // Hieronder worden twee functies aangemaakt waarbij er bij de herkenning van een
+            // keycode (37 en 39) de class 'press' wordt toegevoegd of verwijderd.
+            function arrowDown(e) {
+            const key = document.querySelector(`.arrow-key[data-key="${e.keyCode}"]`);
+            key.classList.add('press')
+            }
+            function arrowUp(e) {
+            const key = document.querySelector(`.arrow-key[data-key="${e.keyCode}"]`);
+            key.classList.remove('press')
+      }
+      </script>
+      <div class="arrow-key-container">
+      <div class="arrow-key left" data-key="37"></div>
+      <div class="arrow-key right" data-key="39"></div>
+      </div>
+      <!-- Hieronder staan alle elementen die ik heb getekend. -->      
       <img src="zozieteenbaleruit.png" id="zozieteenbaleruit" alt="zozieteenbaleruit">
       <div class="sprite right"></div>
       <img src="tekstwolkje.png" id="tekstwolkje" alt="tekstwolkje">
+      <div id="tekstinwolkje">
+            Hiernaast zie je het Philips stadion in 1913! 
+      </div>
       <img src="bal.png" id="bal1" alt="bal1">
       <img src="stadion1913.png" id="stadion1913" alt="stadion1913">
       <img src="poort.png" id="poort" alt="poort">
